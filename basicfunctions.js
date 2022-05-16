@@ -123,3 +123,33 @@ const nameFinder = [
   }
   finderName(nameFinder,'Xabier') ? console.log('Si que esta, en la posicion:', position) : console.log('No esta');  
   finderName(nameFinder,'Remy') ? console.log('Si que esta, en la posicion:', position) : console.log('No esta');
+
+
+    //Iteracion #8
+  //Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.
+  const counterWords = [
+    'code',
+    'repeat',
+    'eat',
+    'sleep',
+    'code',
+    'enjoy',
+    'sleep',
+    'code',
+    'enjoy',
+    'upgrade',
+    'code'
+  ];
+function repeatCounter(param) {
+    let total;
+    param.forEach((element) => {
+        total=0;
+        param.forEach((item) =>{
+            if(element === item){
+                total +=1;
+            }
+        })
+        console.log('La palabra', element, 'esta repetida', total,'veces');
+    })
+}
+repeatCounter(counterWords);
