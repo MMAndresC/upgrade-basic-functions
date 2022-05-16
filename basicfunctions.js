@@ -54,3 +54,17 @@ function average(param) {
 console.log('Promedio sin limitar decimales:', average(numbers2));
 console.log('Promedio con los decimales limitados a 2:', (average(numbers2)).toFixed(2)); //fixed convierte en cadena y asi se puede redondear los decimales 
 
+
+//Iteracion #5
+//Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume.
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+
+function averageWord(param) {
+    let total=0;
+    for (let element of param){
+        typeof element === 'number' ? total += element : total += element.length;
+    }
+    return total;
+}
+console.log('La suma de la cadena mixta es;', averageWord(mixedElements));
+
