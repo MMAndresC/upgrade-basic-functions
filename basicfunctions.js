@@ -95,3 +95,31 @@ function removeDuplicates(param) {
     return noDuplicates;
 }
 console.log(removeDuplicates(duplicates));
+
+
+//Iteracion #7
+//Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe dentro de dicho array 
+//- comprueba si existe el elemento, en caso que existan nos devuelve un true y la posición de dicho elemento y por la contra un false
+const nameFinder = [
+    'Peter',
+    'Steve',
+    'Tony',
+    'Natasha',
+    'Clint',
+    'Logan',
+    'Xabier',
+    'Bruce',
+    'Peggy',
+    'Jessica',
+    'Marc'
+  ];
+  let position;
+  function finderName(param,elementSearched) {
+    if(param.includes(elementSearched)){
+        position = param.indexOf(elementSearched);
+        return (true);
+    }
+    return(false);
+  }
+  finderName(nameFinder,'Xabier') ? console.log('Si que esta, en la posicion:', position) : console.log('No esta');  
+  finderName(nameFinder,'Remy') ? console.log('Si que esta, en la posicion:', position) : console.log('No esta');
