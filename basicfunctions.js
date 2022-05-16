@@ -68,3 +68,30 @@ function averageWord(param) {
 }
 console.log('La suma de la cadena mixta es;', averageWord(mixedElements));
 
+
+//Iteracion #6
+//Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los 
+//elimina para retornar un array sin los elementos duplicados.
+const duplicates = [
+    'sushi',
+    'pizza',
+    'burger',
+    'potatoe',
+    'pasta',
+    'ice-cream',
+    'pizza',
+    'chicken',
+    'onion rings',
+    'pasta',
+    'soda'
+  ];
+function removeDuplicates(param) {
+    const noDuplicates=[];
+    param.forEach((element, position) =>{
+        if (param.lastIndexOf(element) === position){
+            noDuplicates.push(element);
+        }
+    })   
+    return noDuplicates;
+}
+console.log(removeDuplicates(duplicates));
