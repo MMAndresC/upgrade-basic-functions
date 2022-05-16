@@ -39,3 +39,18 @@ function sumAll(param) {
 }
 
 console.log(sumAll(numbers));
+
+
+//Iteracion #4
+//Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
+const numbers2 = [12, 21, 38, 5, 45, 37, 6];
+
+function average(param) {
+    let total=0;
+    param.forEach((element) => (total += element));
+    return (total/param.length);
+}
+
+console.log('Promedio sin limitar decimales:', average(numbers2));
+console.log('Promedio con los decimales limitados a 2:', (average(numbers2)).toFixed(2)); //fixed convierte en cadena y asi se puede redondear los decimales 
+
